@@ -1,3 +1,5 @@
+const preview =``
+const conatiner = document.querySelector('.container')
 const fileInput = document.querySelector(".file-input");
 const filterOptions = document.querySelectorAll(".filter button");
 const rotateOptions = document.querySelectorAll(".rotate button");
@@ -7,8 +9,6 @@ const filterSlider = document.querySelector(".slider input");
 const filterValue = document.querySelector(".slider .value");
 
 
-const conatiner = document.querySelector('.container');
-const preview = ``
 const resetFilterBtn = document.querySelector(".reset-filter");
 const chooseImgBtn = document.querySelector(".choose-img");
 const saveImgBtn = document.querySelector(".save-img");
