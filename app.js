@@ -21,7 +21,7 @@ let rotate = 0,
 
 //the filter function
 const applyFilter = () => {
-  previewImg.style.transform = `rotate(${rotate}deg) scale(${flipHorizontal}, ${flipVertical}`;
+  previewImg.style.transform = `rotateZ(${rotate}deg) scale(${flipHorizontal}, ${flipVertical}`;
   previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;  
 };
 
