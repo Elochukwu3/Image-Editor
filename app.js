@@ -81,17 +81,15 @@ const updateFilter = () => {
 
   applyFilter();
 };
-
 rotateOptions.forEach((option) => {
   option.addEventListener("click", () => {
     //adding click event listener to all rotate button
-    if (option.id === "left") {
+  rotate -=  option.id === "left" &&  90;
       //if clicked btn is left, decrement rotate value by -90
-      rotate -= 90;
-    } else if (option.id === "right") {
+      
+   rotate += option.id === "right" && 90;
       //if clicked btn is left, increment rotate value by +90
-      rotate += 90;
-    } else if (option.id === "vertical") {
+       if (option.id === "vertical") {
       //if flipVertical.value is 1, set this value to -1 else set 1
       flipVertical = flipVertical === 1 ? -1 : 1;
     } else {
