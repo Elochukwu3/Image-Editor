@@ -110,7 +110,7 @@ const resetFilter = () => {
 
   (rotate = 0), (flipHorizontal = 1), (flipVertical = 1);
 
-  filterOptions[0].click // clicking brightness btn, so the brightness selected by default
+  filterOptions[0].click()// clicking brightness btn, so the brightness selected by default
 
   applyFilter();
 };
