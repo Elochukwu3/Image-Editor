@@ -68,12 +68,12 @@ const updateFilter = () => {
   filterValue.innerText = `${filterSlider.value}%`;
   const selectedFilter = document.querySelector(".filter .active");
 
-  if (selectedFilter.id === "brightness") {
+  if (selectedFilter.id === "brightness")brightness = filterSlider.value;
     //if selected filter brightness pass the slider value to brightness value
-    brightness = filterSlider.value;
-  } else if (selectedFilter.id === "saturation") {
-    saturation = filterSlider.value;
-  } else if (selectedFilter.id === "inversion") {
+ 
+  if (selectedFilter.id === "saturation")   saturation = filterSlider.value;
+  
+ if (selectedFilter.id === "inversion") {
     inversion = filterSlider.value;
   } else {
     grayscale = filterSlider.value;
