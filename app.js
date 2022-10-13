@@ -73,11 +73,10 @@ const updateFilter = () => {
  
   if (selectedFilter.id === "saturation")   saturation = filterSlider.value;
   
- if (selectedFilter.id === "inversion") {
-    inversion = filterSlider.value;
-  } else {
-    grayscale = filterSlider.value;
-  }
+ if (selectedFilter.id === "inversion") inversion = filterSlider.value;
+    
+   if(selectedFilter.id === 'grayscale') grayscale = filterSlider.value;
+  
 
   applyFilter();
 };
