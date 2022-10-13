@@ -22,7 +22,7 @@ let rotate = 0,
 //the filter function
 const applyFilter = () => {
   previewImg.style.transform = `rotate(${rotate}deg) scale(${flipHorizontal}, ${flipVertical}`;
-  previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;
+  previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;  
 };
 
 const loadImage = () => {
@@ -118,6 +118,7 @@ const resetFilter = () => {
 const saveImage = () => {
   const canvas = document.createElement("canvas") // creating canvas element
   const ctx = canvas.getContext
+  console.log(ctx);
 }
 
 fileInput.addEventListener("change", loadImage);
