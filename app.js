@@ -5,6 +5,10 @@ const previewImg = document.querySelector(".preview-img img");
 const filterName = document.querySelector(".filter-info .name");
 const filterSlider = document.querySelector(".slider input");
 const filterValue = document.querySelector(".slider .value");
+
+
+const conatiner = document.querySelector('.container');
+const preview = ``
 const resetFilterBtn = document.querySelector(".reset-filter");
 const chooseImgBtn = document.querySelector(".choose-img");
 const saveImgBtn = document.querySelector(".save-img");
@@ -67,7 +71,6 @@ filterOptions.forEach((option) => {
 const updateFilter = () => {
   filterValue.innerText = `${filterSlider.value}%`;
   const selectedFilter = document.querySelector(".filter .active");
-
   if (selectedFilter.id === "brightness")brightness = filterSlider.value;
     //if selected filter brightness pass the slider value to brightness value
  
@@ -76,10 +79,9 @@ const updateFilter = () => {
  if (selectedFilter.id === "inversion") inversion = filterSlider.value;
     
    if(selectedFilter.id === 'grayscale') grayscale = filterSlider.value;
-  
-
   applyFilter();
 };
+
 rotateOptions.forEach((option) => {
   option.addEventListener("click", () => {
     //adding click event listener to all rotate button
