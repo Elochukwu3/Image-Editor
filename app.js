@@ -22,8 +22,8 @@ const preview =`<h2>Easy Image Editor</h2>
       <div class="options">
         <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
         <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
-        <button id="vetical"><i class="bx bx-reflect-vertical"></i></button>
-        <button id="horizontal"><i class="fa-grid-horizontal"></i></button>
+        <button id="vetical"><i class="fa-solid fa-group-arrows-rotate"></i></button>
+        <button id="horizontal"><i class="fa-solid fa-group-arrows-rotate"></i></button>
       </div>
     </div>
   </div>
