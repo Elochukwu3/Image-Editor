@@ -1,4 +1,4 @@
-const preview =`<h2>Easy Image Editor</h2>
+const preview = `<h2>Easy Image Editor</h2>
 <div class="wrapper">
   <div class="editor-panel">
     <div class="filter">
@@ -40,8 +40,8 @@ const preview =`<h2>Easy Image Editor</h2>
 
   </div>
 </div>`;
-const conatiner = document.querySelector('.container');
-conatiner.innerHTML = preview
+const conatiner = document.querySelector(".container");
+conatiner.innerHTML = preview;
 const fileInput = document.querySelector(".file-input");
 const filterOptions = document.querySelectorAll(".filter button");
 const rotateOptions = document.querySelectorAll(".rotate button");
@@ -49,7 +49,6 @@ const previewImg = document.querySelector(".preview-img img");
 const filterName = document.querySelector(".filter-info .name");
 const filterSlider = document.querySelector(".slider input");
 const filterValue = document.querySelector(".slider .value");
-
 
 const resetFilterBtn = document.querySelector(".reset-filter");
 const chooseImgBtn = document.querySelector(".choose-img");
@@ -68,7 +67,7 @@ let rotate = 0,
 //the filter function
 const applyFilter = () => {
   previewImg.style.transform = `rotateZ(${rotate}deg) scale(${flipHorizontal}, ${flipVertical}`;
-  previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;  
+  previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;
 };
 
 const loadImage = () => {
@@ -113,26 +112,26 @@ filterOptions.forEach((option) => {
 const updateFilter = () => {
   filterValue.innerText = `${filterSlider.value}%`;
   const selectedFilter = document.querySelector(".filter .active");
-  if (selectedFilter.id === "brightness")brightness = filterSlider.value;
-    //if selected filter brightness pass the slider value to brightness value
- 
-  if (selectedFilter.id === "saturation")   saturation = filterSlider.value;
-  
- if (selectedFilter.id === "inversion") inversion = filterSlider.value;
-    
-   if(selectedFilter.id === 'grayscale') grayscale = filterSlider.value;
+  if (selectedFilter.id === "brightness") brightness = filterSlider.value;
+  //if selected filter brightness pass the slider value to brightness value
+
+  if (selectedFilter.id === "saturation") saturation = filterSlider.value;
+
+  if (selectedFilter.id === "inversion") inversion = filterSlider.value;
+
+  if (selectedFilter.id === "grayscale") grayscale = filterSlider.value;
   applyFilter();
 };
 
 rotateOptions.forEach((option) => {
   option.addEventListener("click", () => {
     //adding click event listener to all rotate button
-  rotate -=  option.id === "left" &&  90;
-      //if clicked btn is left, decrement rotate value by -90
-      
-   rotate += option.id === "right" && 90;
-      //if clicked btn is left, increment rotate value by +90
-       if (option.id === "vertical") {
+    rotate -= option.id === "left" && 90;
+    //if clicked btn is left, decrement rotate value by -90
+
+    rotate += option.id === "right" && 90;
+    //if clicked btn is left, increment rotate value by +90
+    if (option.id === "vertical") {
       //if flipVertical.value is 1, set this value to -1 else set 1
       flipVertical = flipVertical === 1 ? -1 : 1;
     } else {
@@ -151,16 +150,16 @@ const resetFilter = () => {
 
   (rotate = 0), (flipHorizontal = 1), (flipVertical = 1);
 
-  filterOptions[0].click()// clicking brightness btn, so the brightness selected by default
+  filterOptions[0].click(); // clicking brightness btn, so the brightness selected by default
 
   applyFilter();
 };
 
 const saveImage = () => {
-  const canvas = document.createElement("canvas") // creating canvas element
-  const ctx = canvas.getContext
+  const canvas = document.createElement("canvas"); // creating canvas element
+  const ctx = canvas.getContext;
   console.log(ctx);
-}
+};
 
 fileInput.addEventListener("change", loadImage);
 filterSlider.addEventListener("input", updateFilter);
