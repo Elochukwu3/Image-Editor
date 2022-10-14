@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: cursive;
+ font-family: sans-serif;
 }
 body {
   display: flex;
@@ -20,8 +20,8 @@ body {
   border: 1px solid black;
 }
 .container.disable :where(.editor-panel, .reset-filter, .save-img) {
-    opacity: 0.6;
-    pointer-events: none;
+  opacity: 0.6;
+  pointer-events: none;
 }
 .container h2 {
   font-size: 22px;
@@ -57,7 +57,6 @@ body {
   border-radius: 3px;
   background: rgb(213, 213, 234);
   border: 1px solid #aaa;
-  
 }
 .editor-panel .button:hover {
   background: #f5f5f5;
@@ -70,7 +69,6 @@ body {
 .filter button.active {
   color: #fff;
   background: rgb(105, 105, 177);
-  
 }
 .editor-panel .slider {
   margin-top: 12px;
@@ -84,7 +82,7 @@ body {
 .filter .slider input {
   width: 100%;
   height: 5px;
-  accent-color:rgb(62, 62, 147) ;
+  accent-color: rgb(62, 62, 147);
 }
 .editor-panel .rotate {
   margin-top: 17px;
@@ -119,7 +117,7 @@ body {
   text-transform: uppercase;
 }
 .controls .reset-filter {
-  color: #f5f5f5;
+  color: #f5f5f5 !important;
   border: 1px solid #6c757d;
   background-color: rgb(225, 102, 102);
 }
