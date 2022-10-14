@@ -1,4 +1,4 @@
-const preview = `<h2>Easy Image Editor</h2>
+const preview = `<h2>Image Editor</h2>
 <div class="wrapper">
   <div class="editor-panel">
     <div class="filter">
